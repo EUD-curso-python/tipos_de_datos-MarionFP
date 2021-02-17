@@ -7,6 +7,7 @@ primer caracter `\n` y guardar el resultado en una variable llamada `var1`.
 """
 
 var1 = data.split('\n', 1)
+print(' ')
 print(len(var1))
 
 
@@ -22,12 +23,14 @@ decimales = var1[1]
 el caracter `,` y guardar el resultado en una variable llamada `apellidos_list`.
 """
 apellidos_list = apellidos.split(',')
+print(' ')
 print(len(apellidos_list))
 
 """Dividir el string contenido en la variable `decimales` en donde se encuentre el 
 el caracter `;` y guardar el resultado en una variable llamada `decimales_list`.
 """
 decimales_list = decimales.split(';')
+print(' ')
 print(len(decimales_list))
 
 """Obtener el elemento en la posición 38 de `decimales_list`, procesarlo para 
@@ -35,8 +38,10 @@ convertirlo en un entero y guardarlo en variable `var2`.
 """
 var= decimales_list[38]
 var3 = float(var)
+print(' ')
 print(var3)
 var2 = int(var3)
+print(' ')
 print(var2)
 
 """Obtener el valor en la posición que indique dicho entero (`var2`) de la lista 
@@ -44,18 +49,21 @@ print(var2)
 """
 
 apellido = apellidos_list[var2]
+print(' ')
 print(apellido)
 
 """obtener la longitud (cantidad de caracteres) de la variable `apellido` y 
 guardar el resultado en `len_apellido`.
 """
 len_apellido = len(apellido)
+print(' ')
 print(len_apellido)
 
 """Remover los espacios en blanco que hayan en la variable `apellido` y guardar 
 resultado en `apellido2`.
 """
 apellido2 = apellido.strip()
+print(' ')
 print(apellido2)
 
 """Guardar en `apellido_es_mayuscula` si `apellido2` es un string que contiene 
@@ -63,6 +71,7 @@ solo letras mayúsculas.
 """
 
 apellido_es_mayuscula = apellido2.isupper()
+print(' ')
 print(apellido_es_mayuscula)
 
 """Convertir la variable `apellido2` de mayúsculas a minúsculas si está en mayúsculas, 
@@ -70,6 +79,7 @@ o de minúsculas a mayúsculas si está en minúsculas y guardarla en `apellido3
 """
 
 apellido3 = apellido2.upper()
+print(' ')
 print(apellido3)
 
 """Crear variable `a_in_apellido` que contenga la cantidad de letras a que contiene 
@@ -77,6 +87,7 @@ la variable `apellido2`.
 """
 
 a_in_apellido = apellido2.count('a')
+print(' ')
 print(a_in_apellido)
 
 """Crear variable `apellido_end_ez` que contenga si la variable `apellido2` 
@@ -84,6 +95,7 @@ termina con el string `"ez"`.
 """
 
 apellido_end_ez = apellido2.endswith('ez')
+print(' ')
 print(apellido_end_ez)
 
 """Crear tupla llamada `apellidos_tuple` que contenga los elementos desde el 49 
@@ -91,37 +103,59 @@ al 23 (en orden invertido), saltandose de a 1 elemento (49, 47, 45 , etc) de la
 lista `apellidos_list`.
 """
 
-#print(apellidos_list)
-apellidos_tuple = apellidos_list(23 : 49 : 1)
-print(apellidos_list)
+apellidos_tuple = tuple(apellidos_list[49:22:-2])
+print(' ')
+print(apellidos_tuple)
+
+#del 49 al 22 saltando de 1 elemento -2 debe ir en -2
+#Prieto a vasquez
 
 """Crear variable `apellidos_list2` que contenga una copia de `apellidos_tuple` 
 (con las conversiones que sean necesarias) y agregarle el elemento de la 
 posición 78 de la lista `apellidos_list`.
 """
 
+apellidos_list2 = list(apellidos_tuple)
+apellidos_list2.append(apellidos_list[78])
+print(' ')
+print(apellidos_list2)
 
 """Eliminar el 4 elemento de la variable `apellidos_list2`.
 """
 
+apellidos_list2.pop(3)
+print(' ')
+print(apellidos_list2)
 
 """Eliminar el elemento igual a "  MORALES" de la variable `apellidos_list2`.
 """
 
+apellidos_list2.remove('  MORALES')
+print(' ')
+print(apellidos_list2)
 
 """Agregar (concatenar) a la variable `apellidos_list2`, la lista obtenida del
 elemento 56 al 70 de la variable `apellidos_list`.
 """
 
+apellidos_list2 = apellidos_list2 + apellidos_list[56:70:1]
+print(' ')
+print(apellidos_list[56:70:1])
+print(' ')
+print(apellidos_list2)
 
 """Invertir el orden actual de la variable `apellidos_list2`.
 """
 
+apellidos_list2.reverse()
+print(' ')
+print(apellidos_list2)
 
 """Crear variable `apellidos_set1` con los elementos del 56 al 66 de la 
 variable `apellidos_list`, y crear variable `apellidos_set2` con elementos del 
 62 al 76 de la variable `apellidos_list`.
 """
+
 
 
 """Agregar a variable `apellidos_set1` el elemento en la pocisión 67 de la 
