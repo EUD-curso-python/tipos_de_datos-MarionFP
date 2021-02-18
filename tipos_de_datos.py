@@ -174,7 +174,7 @@ variable `apellidos_list`.
 """
 
 print(' ')
-apellidos_set1.update(apellidos_list[68:70])
+apellidos_set1.update(apellidos_list[68:71])
 print(apellidos_set1)
 
 """Eliminar el elemento " CAMPOS  " de la variable `apellidos_set1`.
