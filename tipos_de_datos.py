@@ -215,8 +215,8 @@ print(apellidos_set5)
 """
 
 print(' ')
-apellidos_set6 = apellidos_set1.symmetric_difference(apellidos_set2)
-print(apellidos_set6)
+apellidos_set5 = apellidos_set1.symmetric_difference(apellidos_set2)
+print(apellidos_set5)
 
 
 """Crear la variable `var3` con la respuesta a la pregunta de si `apellidos_set3` 
@@ -232,7 +232,7 @@ del 0 al 4 de la lista `apellidos_lista`.
 """
 
 print(' ')
-apellidos_dict = dict.fromkeys(apellidos_list[0:4])
+apellidos_dict = dict.fromkeys(apellidos_list[0:5])
 print(apellidos_dict)
 
 
@@ -256,7 +256,7 @@ guardarlo en la variable `apellido_gonzalez`.
 """
 
 print(' ')
-apellido_gonzalez = apellidos_dict['gonzalez']
+apellido_gonzalez = apellidos_dict.pop('gonzalez')
 print(apellido_gonzalez)
 
 """Eliminar el último elemento del diccionario `apellidos_dict`.
