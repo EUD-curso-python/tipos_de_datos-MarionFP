@@ -137,11 +137,8 @@ print(apellidos_list2)
 """Agregar (concatenar) a la variable `apellidos_list2`, la lista obtenida del
 elemento 56 al 70 de la variable `apellidos_list`.
 """
-
-apellidos_list2 = apellidos_list2 + apellidos_list[56:70:1]
 print(' ')
-print(apellidos_list[56:70:1])
-print(' ')
+apellidos_list2.extend(apellidos_list[56:71])
 print(apellidos_list2)
 
 """Invertir el orden actual de la variable `apellidos_list2`.
@@ -156,16 +153,12 @@ variable `apellidos_list`, y crear variable `apellidos_set2` con elementos del
 62 al 76 de la variable `apellidos_list`.
 """
 print(' ')
-print (apellidos_list[56:67:1])
-apellidos_set1 = set(apellidos_list[56:67:1])
-print(' ')
+apellidos_set1 = set(apellidos_list[56:67])
 print(apellidos_set1)
 
 
 print(' ')
-print (apellidos_list[62:77:1])
-apellidos_set2 = set(apellidos_list[62:77:1])
-print(' ')
+apellidos_set2 = set(apellidos_list[62:77])
 print(apellidos_set2)
 
 """Agregar a variable `apellidos_set1` el elemento en la pocisión 67 de la 
@@ -181,7 +174,7 @@ variable `apellidos_list`.
 """
 
 print(' ')
-apellidos_set1.update(apellidos_list[68:70:1])
+apellidos_set1.update(apellidos_list[68:70])
 print(apellidos_set1)
 
 """Eliminar el elemento " CAMPOS  " de la variable `apellidos_set1`.
@@ -239,7 +232,7 @@ del 0 al 4 de la lista `apellidos_lista`.
 """
 
 print(' ')
-apellidos_dict = dict.fromkeys(apellidos_list[1:5:1])
+apellidos_dict = dict.fromkeys(apellidos_list[0:4])
 print(apellidos_dict)
 
 
@@ -283,5 +276,5 @@ guardarlo en la variable `apellido_none`.
 
 
 print(' ')
-apellido_none = apellidos_dict.get('no_existe') is None
+apellido_none = apellidos_dict.pop('no_existe',None) 
 print(apellido_none)
